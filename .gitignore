@@ -1,0 +1,18 @@
+node_modules/
+dist/
+coverage/
+*.tsbuildinfo
+
+# Vercel
+.vercel/
+
+# KataGo 바이너리·모델 (빌드 시 scripts/fetch-katago.sh로 받음)
+server/bin/
+server/models/
+
+# local env files
+.env
+.env*.local
+
+# macOS
+.DS_Store
