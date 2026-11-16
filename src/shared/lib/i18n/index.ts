@@ -6,7 +6,9 @@ export { useTranslation } from 'react-i18next';
 
 // 문구는 번들에 같이 들어 있어 바로(동기) 준비된다. HTML 이스케이프는 React가 한다.
 void i18n.use(initReactI18next).init({
-  resources: { en: { translation: en } },
+  resources: {
+    en: { translation: en },
+  },
   lng: 'en',
   fallbackLng: 'en',
   initAsync: false,

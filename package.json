@@ -12,7 +12,9 @@
     "build": "tsc -b && vite build",
     "preview": "vite preview",
     "preinstall": "npx only-allow pnpm",
-    "type-check": "tsc -b --noEmit"
+    "type-check": "tsc -b --noEmit",
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix"
   },
   "dependencies": {
     "@tailwindcss/vite": "^4.3.5",
@@ -25,7 +27,9 @@
     "tailwindcss": "^4.3.5"
   },
   "devDependencies": {
+    "@antfu/eslint-config": "^10.0.0",
     "@babel/core": "^8.1.2",
+    "@eslint-react/eslint-plugin": "^5.30.3",
     "@rolldown/plugin-babel": "^0.3.1",
     "@types/babel__core": "^7.20.5",
     "@types/node": "^26.6.6",
@@ -33,7 +37,10 @@
     "@types/react-dom": "^19.3.0",
     "@vitejs/plugin-react": "^6.3.0",
     "babel-plugin-react-compiler": "^1.0.0",
-    "typescript": "^7.0.2",
+    "eslint": "^10.15.0",
+    "eslint-plugin-better-tailwindcss": "^4.11.0",
+    "eslint-plugin-react-refresh": "^0.5.8",
+    "typescript": "^6.0.3",
     "vite": "^8.3.8"
   }
 }
