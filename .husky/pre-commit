@@ -1,0 +1,11 @@
+# main 직접 커밋 금지 (작업 브랜치 → PR로 머지). 우회: SKIP_BRANCH_PROTECTION=true
+if [ -z "$SKIP_BRANCH_PROTECTION" ]; then
+  BRANCH=$(git rev-parse --abbrev-ref HEAD)
+  if [ "$BRANCH" = "main" ] || [ "$BRANCH" = "master" ]; then
+    echo ">> $BRANCH 브랜치에 직접 커밋할 수 없어요. 작업 브랜치를 만들어 주세요."
+    exit 1
+  fi
+fi
+
+pnpm type-check
+pnpm lint-staged

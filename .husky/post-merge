@@ -1,0 +1,5 @@
+# pnpm-lock.yaml이 바뀌었으면 의존성을 맞춘다.
+if git diff --name-only HEAD@{1} HEAD | grep -q '^pnpm-lock.yaml$'; then
+  echo ">> pnpm-lock.yaml이 바뀌어 pnpm install을 실행해요."
+  pnpm install
+fi
