@@ -1,0 +1,6 @@
+@import 'tailwindcss';
+
+/* 디자인 토큰. 화면을 만들면서 채운다. */
+@theme {
+  --font-sans: ui-sans-serif, system-ui, -apple-system, sans-serif;
+}
